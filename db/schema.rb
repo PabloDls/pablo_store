@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160924203345) do
+ActiveRecord::Schema.define(version: 20160924211717) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "street"
@@ -112,14 +112,14 @@ ActiveRecord::Schema.define(version: 20160924203345) do
     t.integer  "qty"
     t.string   "description"
     t.integer  "category_id"
-    t.integer  "product_type"
+    t.integer  "product_type_id"
     t.integer  "vendor_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id"
-  add_index "products", ["product_type"], name: "index_products_on_product_type"
+  add_index "products", ["product_type_id"], name: "index_products_on_product_type_id"
   add_index "products", ["vendor_id"], name: "index_products_on_vendor_id"
 
   create_table "scaffolds", force: :cascade do |t|

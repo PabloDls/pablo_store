@@ -1,8 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
 
-<table>
+  <%= f.label :category_name_cont %>
+  <%= f.search_field :category_name_cont %>
+
+  <%= f.label   :product_type_name_cont%>
+  <%= f.search_field :product_type_name_cont%>
+  <%= f.submit %>
+<% end %>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Price</th>
@@ -24,7 +33,7 @@
         <td><%= product.qty %></td>
         <td><%= product.description %></td>
         <td><%= product.category.name %></td>
-        <td><%= product.product_type %></td>
+        <td><%= product.product_type.name %></td>
         <td><%= product.vendor_id %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>

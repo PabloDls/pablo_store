@@ -7,4 +7,5 @@ class ProductType < ActiveRecord::Base
       end
     end
   end
+  has_many :products
 end
