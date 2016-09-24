@@ -7,4 +7,5 @@ class Category < ActiveRecord::Base
       end
     end
   end
+  has_many :products
 end
