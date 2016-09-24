@@ -10,5 +10,6 @@ class CreateOrderItems < ActiveRecord::Migration
     end
     add_index :order_items, :shipping_id
     add_index :order_items, :cart_id
+    add_index :order_items, :tax_id
   end
 end
