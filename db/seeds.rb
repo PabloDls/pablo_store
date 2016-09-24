@@ -30,7 +30,7 @@ ProductType.create name: "Sex", category_id: books.id
 
 ProductType.create name: "Horror", category_id: movies.id
 ProductType.create name: "Comedy", category_id: movies.id
-ProductType.create name: "Action", category_id: movies.id
+ProductType.create name: "Action", category_id: Movies.id
 
 ProductType.create name: "T-Shirts", category_id: clothes.id
 ProductType.create name: "Shorts", category_id: clothes.id
